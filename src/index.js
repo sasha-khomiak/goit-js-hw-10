@@ -29,6 +29,10 @@ function onInputCountry(event) {
 
   // якщо запит порожній рядок, то виходимо
   if (inputText === '') {
+    // уникнення неочищення екрану. Якщо у нас показує список 
+    // і ми очищаємо інпут одним махом, то екран не очищається
+    hideCountryInfo();
+    hideCountryList();
     return;
   }
 
